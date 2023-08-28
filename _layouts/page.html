@@ -1,0 +1,43 @@
+---
+layout: default
+---
+    <!-- Page Title
+		============================================= -->
+		<section class="page-title bg-transparent">
+			<div class="container">
+				<div class="page-title-row">
+
+					<div class="page-title-content">
+						<h1>{{ page.title | escape }}</h1>
+					</div>
+
+				</div>
+			</div>
+		</section><!-- .page-title end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+					<!-- Posts
+					============================================= -->
+					<div id="posts" class="row grid-container gutter-30">
+
+						<div class="entry col-12">
+							<div class="grid-inner">
+								<div class="entry-image">
+									<img src="{{ "/assets/images/misc/about-us.jpg" | relative_url }}" alt="Standard Post with Image">
+								</div>
+								<div class="entry-content">
+									{{ content }}
+								</div>
+							</div>
+						</div>
+
+					</div><!-- #posts end -->
+
+				</div>
+			</div>
+		</section><!-- #content end -->
