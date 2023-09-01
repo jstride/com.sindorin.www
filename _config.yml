@@ -24,11 +24,11 @@ phone: +61 414 674 830
 author: Jake Stride
 tagline: Transforming Businesses with Experienced C-Suite Leadership and Advanced AI Advisory.
 email: info@sindorin.com
-address: Our Address
+address: 1060 Hay Street, Perth, Western Australia 6005
 description: >- # this means to ignore newlines until "baseurl:"
   Transforming Businesses with Experienced C-Suite Leadership and Advanced AI Advisory.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://sindorin.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.sindorin.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sindorin
 github_username:  jekyll
 google_analytics: G-FC7KSLMEJE
