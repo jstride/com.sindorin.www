@@ -53,6 +53,18 @@ CNVS.AjaxForm = function() {
 						},
 						focusCleanup: true,
 						submitHandler: function(form) {
+							// Split by a space get first name
+							fullName = jQuery(form).find("[name='fullname']").val(),
+							//console.log(fullName);
+							
+							firstName = fullName.split(' ')[0];
+							lastName = fullName.replace(firstName, '');
+							//console.log(firstName);
+							//console.log(lastName);
+
+							jQuery(form).find("[name='firstname']").val(firstName);
+							jQuery(form).find("[name='lastname']").val(lastName);
+
 							if( element.hasClass( 'custom-submit' ) ) {
 								jQuery(form).submit();
 								return true;
@@ -77,6 +89,14 @@ CNVS.AjaxForm = function() {
 								target: elResult,
 								dataType: 'json',
 								success: function(data) {
+
+									// Change to accomodate vtiger forms
+									if (data.result == 'ok') {
+										data.message = 'Thank you';
+									}
+
+									console.log(data);
+
 									if( elLoader == 'button' ) {
 										defaultBtn.html( defaultBtnText );
 									} else {
@@ -101,7 +121,7 @@ CNVS.AjaxForm = function() {
 										__modules.notifications(elResult);
 									}
 
-									if( data.alert != 'error' ) {
+									if( data.success == true ) {
 										jQuery(form).resetForm();
 										jQuery(form).find('.btn-group > .btn').removeClass('active');
 
